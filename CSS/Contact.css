@@ -1,114 +1,98 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,700,900");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-* {
-    margin: 0%;
-    padding: 0%;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(220, 220, 220);
+}
+
+.contact h2{
+    font-size: 40px;
+    color: rgb(30, 90, 151);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact form{
+    width: 600px;
+    text-align: center;
+}
+
+form .input-box{
+    display: flex;
+    justify-content:space-between ;
+}
+
+.input-box .input-field{
+    width: 48.5%;
+}
+
+.field .item{
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    border: 3px solid rgb(40, 91, 212);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #000000;
+    margin: 12px 0;
+}
+
+.field.error .item{
+    border-color: #d93025;
+}
+
+.field .item::placeholder{
+    color: rgb(68, 68, 68);
+}
+
+
+form .textarea-field .item{
+    resize: none;
+}
+
+form button{
+    padding: 12px 32px;
+    background: rgb(40, 91, 212);
+    border-radius: 6px;
     border: none;
     outline: none;
-    scroll-behavior: smooth;
-    font-family: "Poppins", "sans-serif";
-    font-weight: bold;
-}
-
-:root {
-    --back-color: #fdfdfd;
-    --text-color: #190482;
-    --main-color: #7752fe;
-    --white-color: #fdfdfdfd;
-    --shadow-color: rgba(0, 0, 0, 0.2);
-}
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-
-body {
-    background: var(--back-color);
-    color: var(--text-color);
-}
-
-h2 {
-    text-align: center;
-    font-size: 5rem;
-    color: black;
-    margin-bottom: 10rem;
-}
-
-h2 span {
-    color: var(--main-color);
-}
-
-form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-form .input-box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-form .input-box input,
-form textarea {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.4rem;
-    color: var(--text-color);
-    background: var(--back-color);
-    border-radius: 0.8rem;
-    margin: 0.7rem 0;
-    box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
-}
-
-form .btn {
-    padding: 5px;
-    background: var(--main-color);
-    border: 0.2rem solid var(--main-color);
-    border-radius: 1rem;
-    box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
-    font-size: 2rem;
-    color: var(--white-color);
-    transition: 0.5s ease;
-}
-
-form a {
-    padding: 5px;
-    background: red;
-    border: 0.2rem solid red;
-    border-radius: 1rem;
-    box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
-    font-size: 2rem;
-    color: var(--white-color);
-    transition: 0.5s ease;
-}
-
-form button {
-    background: transparent;
-}
-
-form .btn:hover {
-    background-color: var(--white-color);
-    color: var(--main-color);
+    box-shadow: 0 0 20px rgb(40, 91, 212);
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
     cursor: pointer;
+    margin-top: 20px;
+    transition: 0.4s;
 }
 
-form a:hover {
-    background-color: var(--white-color);
-    color: red;
-    cursor: pointer;
+form button:hover{
+    box-shadow: none;
 }
 
-form .btns {
-    display: flex;
-    justify-content: space-between;
+.field .error-message{
+    font-size: 15px;
+    color: #d93025;
+    text-align: left;
+    margin: -5px 0 10px;
+    font-weight: 600;
+    display: none;
 }
 
-form textarea {
-    resize: none;
+.field.error .error-message{
+    display: block;
+}
+
+form .textarea-field .error-message{
+    margin-top: -10px;
 }
